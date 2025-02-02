@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+header {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+p {
+  font-family: "Sometype Mono Variable", monospace;
+}
+html {
+  background-color: rgb(10, 10, 10);
+}
+
+p.sanstext {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+span {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.text-stroke-3 {
+  -webkit-text-stroke: 1px white;
+}
+.text-stroke-1 {
+  -webkit-text-stroke: 0.5px white;
+}

@@ -1,0 +1,18 @@
+---
+import AnimatedProjectText from "../components/AnimatedProjectText";
+import Project from "../components/Project.astro";
+import projects from "../constants/projects";
+
+---
+
+<section id="projects" class="relative lg:pl-[450px] h-[200vh] w-full "  >
+    <div class="bg-[#0a0a0a] w-full relative overflow-clip " >
+    <h2 class="sticky w-full text-right lg:top-[16px] top-[70px] mix-blend-difference text-white text-[14px] z-10 tracking-wide font-medium pr-[16px] ">
+        /Projects
+    </h2>
+    {projects.map((project, index) => (
+        <Project {...project} direction={index % 2 == 0 ? "left" : "right"  } />
+    ))}
+    </div>
+    
+</section>

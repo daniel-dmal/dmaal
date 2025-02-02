@@ -1,0 +1,32 @@
+---
+import Nav from "../components/Nav";
+import AnimatedText from "../components/AnimatedText";
+import TypewritterText from "../components/TypewritterText";
+const words = ["design", "build", "maintain", "test", "deploy"];
+---
+<section class="lg:max-w-[450px] lg:bg-white/0 overflow-clip lg:fixed relative w-full lg:h-screen p-[16px] h-9/10 flex flex-col items-start justify-center ">
+    <Nav />
+    <div class="w-full" >
+        <hgroup class="border-l-2 border-white pl-[12px] ">
+            <h1 class="w-full text-[30px] leading-none tracking-wider font-medium text-white">
+                DANIEL MACIAS
+            </h1>
+            <p class="text-white text-[20px] tracking-wide  " >
+                Software Developer
+            </p>
+        </hgroup>
+        <p class="text-white text-[16px] tracking-wide mt-[16px]"
+        style="font-family: 'IBM Plex Sans', sans-serif;"
+        >
+            I <TypewritterText client:visible words={words}/> custom digital solutions for businesses and individuals.
+        </p>
+        <div>
+            <a href="mailto:danielmaciasal1705@gmail.com" target="_blank"  >
+                <button class="text-white cursor-pointer text-[16px] hover:bg-white hover:text-black transition-all tracking-wide mt-[16px] p-[8px] border-2 hover:-translate-y-1 border-white rounded-[8px]">
+                    <p> LET'S TALK </p>
+                </button>
+            </a>
+        </div>  
+    </div>
+    <AnimatedText text="about-me " page={false} client:visible  />
+</section>
