@@ -12,7 +12,8 @@ const projects = [
   },
   {
     title: "itProve",
-    description: "Description 2",
+    description:
+      "designed and develioped a website for a Microsoft partner. The website is fast, multilingual, accessible, and SEO-friendly (with a 100 score on lighthouse).",
     techStack: ["React", "TypeScript", "Astro", "TailwindCSS"],
     link: "https://itprove.tech/en",
   },
