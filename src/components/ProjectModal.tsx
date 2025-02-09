@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import type { ProjectType } from "@/constants/projects";
 
 const ProjecModal = ({ project }: { project: ProjectType }) => {
-  const { title, description, techStack, link } = project;
+  const { title, description, techStack, link, video } = project;
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -43,7 +43,9 @@ const ProjecModal = ({ project }: { project: ProjectType }) => {
                   key="content"
                 >
                   <div className="flex flex-col items-center justify-center gap-[16px] lg:flex-row">
-                    <div className="h-[70vh] w-[90vw] rounded-[8px] bg-white p-1 lg:h-[70vh] lg:w-[60vw]">
+                    <div
+                      className={`${video ? "h-auto w-auto" : "h-[65vh] w-[91vw]"} rounded-[8px] bg-white p-1 lg:h-[70vh] lg:w-[60vw]`}
+                    >
                       {link ? (
                         <iframe
                           src={link}
@@ -51,6 +53,25 @@ const ProjecModal = ({ project }: { project: ProjectType }) => {
                           className="h-full w-full"
                           style={{ zoom: 0.8 }}
                         />
+                      ) : video ? (
+                        <>
+                          <video
+                            src={`/videos/${title.toLowerCase()}1.mp4`}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="hidden w-full rounded-[8px] object-cover md:block md:max-h-[90vh] lg:min-h-[70vh]"
+                          />
+                          <video
+                            src={`/videos/${title.toLowerCase()}1mobile.mp4`}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="object-fit block w-full rounded-[8px] md:hidden md:max-h-[90vh] lg:min-h-[70vh]"
+                          />
+                        </>
                       ) : (
                         <>
                           <img
@@ -69,7 +90,7 @@ const ProjecModal = ({ project }: { project: ProjectType }) => {
 
                     <div className="w-full lg:w-[256px]">
                       <h1 className="text-2xl font-bold">{title}</h1>
-                      <p className="text-lg">{description}</p>
+                      <p className="text-sm">{description}</p>
                       <button
                         className="p1-2 mt-4 w-full cursor-pointer rounded-md border border-white bg-transparent px-4 py-1 text-white transition-colors hover:bg-white hover:text-black"
                         onClick={() => setShowModal(false)}

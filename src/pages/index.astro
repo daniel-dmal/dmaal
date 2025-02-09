@@ -1,8 +1,10 @@
 ---
+import Footer from '@/sections/Footer.astro';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import AboutMe from '../sections/About-me.astro';
 import Projects from '../sections/Projects.astro';
+import AditionalWork from '../sections/AditionalWork.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -11,5 +13,6 @@ import Projects from '../sections/Projects.astro';
 <Layout>
 	<AboutMe />
 	<Projects />
-	<div class="w-full h-[200vh]" ></div>
+	<AditionalWork />
+	<Footer/>
 </Layout>

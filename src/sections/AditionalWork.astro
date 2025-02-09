@@ -1,0 +1,20 @@
+---
+import AdditionalWork from "@/components/AdditionalWork";
+import aditionalWork from "../constants/aditionalWork";
+import AnimatedText from "@/components/AnimatedText";
+---
+
+<section id="aditional work" class="pt-[70px] w-full relative lg:pl-[450px] px-[16px] max-w-screen bg-[#0a0a0a] z-0 overflow-clip"  >
+    <h2 class="sticky w-full text-right lg:top-[16px] top-[70px] mix-blend-difference text-white text-[14px] z-10 tracking-wide font-medium pr-[16px] ">
+        /additional-work
+    </h2>
+    <div
+    class="w-full flex flex-col max-w-[800px] mx-auto gap-[32px] px-[16px] py-[32px] "
+    >
+        {aditionalWork.map((work, index) => (
+            <AdditionalWork client:visible props={{...work, number:index}}/>
+        ))}
+    </div>
+    <div class="relative -z-10" >
+    </div>
+</section>
