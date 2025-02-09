@@ -13,7 +13,7 @@ const AdditionalWork = ({ props }: { props: props }) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: reversed ? -100 : 100 }}
-      transition={{ delay: number * 0.2 }}
+      transition={{ delay: number * 0.1 }}
       whileInView={{ opacity: 1, x: 0 }}
       className={`flex w-full flex-row px-[8px] ${reversed ? "justify-start" : "justify-end"}`}
     >

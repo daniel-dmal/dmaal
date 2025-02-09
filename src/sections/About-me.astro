@@ -20,12 +20,17 @@ const words = ["design", "build", "maintain", "test", "deploy"];
         >
             I <TypewritterText client:visible words={words}/> custom digital solutions for businesses and individuals.
         </p>
-        <div>
+        <div class="w-full justify-between items-center flex flex-row " >
             <a href="mailto:daniel@dmaal.dev" target="_blank"  >
                 <button class="text-white cursor-pointer text-[16px] hover:bg-white hover:text-black transition-all tracking-wide mt-[16px] p-[8px] border-2 hover:-translate-y-1 border-white rounded-[8px]">
                     <p> LET'S TALK </p>
                 </button>
             </a>
+            <nav class="flex items-center justify-between mt-[16px]">
+                <a href="https://github.com/daniel-dmal" target="_blank">
+                <img src="/images/github.svg" alt="github" class="size-[32px]"/>
+                </a>
+            </nav>
         </div>  
     </div>
     <AnimatedText text="about-me " page={false} client:visible  />

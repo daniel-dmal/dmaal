@@ -19,5 +19,11 @@ const aditionalWork = [
       "Developed in a student web app that paired students based on their skill, it used charts and a pairing algorithm designed by me to determine which areas a student needed help with and pair them with their counterpart student.",
     techStack: ["Flask", "Python", "React", "Seaborn", "Git"],
   },
+  {
+    title: "VsCode Extension",
+    description:
+      "Developed a VsCode extension that parses a fliles and returns comments that contain TODOs, FIXMEs, and other keywords. The extension also has a feature that allows the user to highlight comments.",
+    techStack: ["TypeScript", "VsCode API", "Git"],
+  },
 ];
 export default aditionalWork;

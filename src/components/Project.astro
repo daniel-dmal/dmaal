@@ -12,14 +12,14 @@ const { title, description, link, techStack, direction, video } = Astro.props;
     <div class="w-full flex items-center justify-between relative lg:flex-row flex-col gap-[12px] md:px-[16px] px-[8px]   " >
         <ProjectModal project={{title, description, techStack, link, video}} client:visible />
         {video ? (
-            <video src={`/videos/${title.toLowerCase()}1.mp4`} autoplay loop muted playsinline preload="none" class="w-full md:block hidden  md:max-h-[90vh] min-h-[60vh] lg:min-h-[70vh] object-cover rounded-[8px] " />
-            <video src={`/videos/${title.toLowerCase()}1mobile.mp4`} autoplay loop muted playsinline preload="none" class="w-full md:hidden block  md:max-h-[90vh] min-h-[60vh] lg:min-h-[70vh] object-fit rounded-[8px] " />
+            <video src={`/videos/${title.toLowerCase()}1.mp4`} autoplay loop muted playsinline preload="none" class="w-full md:block hidden  md:max-h-[90lvh] min-h-[60lvh] lg:min-h-[70lvh] object-cover rounded-[8px] " />
+            <video src={`/videos/${title.toLowerCase()}1mobile.mp4`} autoplay loop muted playsinline preload="none" class="w-full md:hidden block  md:max-h-[90lvh] min-h-[60lvh] lg:min-h-[70lvh] object-fit rounded-[8px] " />
 
         ) : (
         <img src={`/images/${title.toLowerCase()}1.webp`} alt={title} 
-        class={`w-full md:block hidden md:max-h-[90vh] min-h-[60vh] lg:min-h-[70vh] object-cover rounded-[8px]`} />
+        class={`w-full md:block hidden md:max-h-[90vh] min-h-[60lvh] lg:min-h-[70lvh] object-cover rounded-[8px]`} />
         <img src={`/images/${title.toLowerCase()}1mobile.webp`} alt={title}
-        class={`w-full md:hidden block md:max-h-[90vh] max-h-[95vh]  min-h-[60vh] lg:min-h-[70vh] object-contain md:object-cover rounded-[8px]`} />
+        class={`w-full md:hidden block md:max-h-[90lvh] max-h-[95lvh]  min-h-[60lvh] lg:min-h-[70lvh] object-contain md:object-cover rounded-[8px]`} />
         )}
 
 
